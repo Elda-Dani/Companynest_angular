@@ -7,11 +7,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-
+import { EmployeeaddComponent } from './employeeadd/employeeadd.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes:Routes=[
   {
     path:"",component:AdminloginComponent
+  },
+  {
+    path:"employeeadd",component:EmployeeaddComponent
   }
 ]
 
@@ -19,13 +23,15 @@ const appRoutes:Routes=[
   declarations: [
     AppComponent,
     NavbarComponent,
-    AdminloginComponent
+    AdminloginComponent,
+    EmployeeaddComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
