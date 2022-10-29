@@ -28,4 +28,8 @@ empDelete=(data:any)=>{
   return this.http.post("http://localhost:8080/deleteemployee",data)
 }
 
+secuAdd=(data:any)=>{
+  return this.http.post("http://localhost:8080/addsecurity",data)
+}
+
 }
