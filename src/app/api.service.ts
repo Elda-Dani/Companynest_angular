@@ -46,4 +46,11 @@ secuDelete=(data:any)=>{
   return this.http.post("http://localhost:8080/deletesecurity",data)
 }
 
+empLogin=(data:any)=>{
+  return this.http.post("http://localhost:8080/emplogin",data)
+}
+secuLogin=(data:any)=>{
+  return this.http.post("http://localhost:8080/securitylogin",data)
+}
+
 }
