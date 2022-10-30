@@ -18,6 +18,8 @@ import { ViewsecurityComponent } from './viewsecurity/viewsecurity.component';
 import { LoginnavbarComponent } from './loginnavbar/loginnavbar.component';
 import { EmployeeloginComponent } from './employeelogin/employeelogin.component';
 import { SecurityloginComponent } from './securitylogin/securitylogin.component';
+import { EmployeenavComponent } from './employeenav/employeenav.component';
+import { SecuritynavComponent } from './securitynav/securitynav.component';
 
 const appRoutes:Routes=[
   {
@@ -66,7 +68,9 @@ path:"securitylogin",component:SecurityloginComponent
     ViewsecurityComponent,
     LoginnavbarComponent,
     EmployeeloginComponent,
-    SecurityloginComponent
+    SecurityloginComponent,
+    EmployeenavComponent,
+    SecuritynavComponent
   ],
   imports: [
     BrowserModule,
