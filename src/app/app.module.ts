@@ -13,6 +13,8 @@ import { EmployeesearchComponent } from './employeesearch/employeesearch.compone
 import { TestingComponent } from './testing/testing.component';
 import { ViewemployeeComponent } from './viewemployee/viewemployee.component';
 import { SecurityaddComponent } from './securityadd/securityadd.component';
+import { SearchsecurityComponent } from './searchsecurity/searchsecurity.component';
+import { ViewsecurityComponent } from './viewsecurity/viewsecurity.component';
 
 const appRoutes:Routes=[
   {
@@ -32,6 +34,12 @@ const appRoutes:Routes=[
 },
 {
   path:"securityadd",component:SecurityaddComponent
+},
+{
+  path:"securitysearch",component:SearchsecurityComponent
+},
+{
+path:"securityview",component:ViewsecurityComponent
 }
 ]
 
@@ -44,7 +52,9 @@ const appRoutes:Routes=[
     EmployeesearchComponent,
     TestingComponent,
     ViewemployeeComponent,
-    SecurityaddComponent
+    SecurityaddComponent,
+    SearchsecurityComponent,
+    ViewsecurityComponent
   ],
   imports: [
     BrowserModule,

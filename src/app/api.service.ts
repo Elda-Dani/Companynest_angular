@@ -32,4 +32,18 @@ secuAdd=(data:any)=>{
   return this.http.post("http://localhost:8080/addsecurity",data)
 }
 
+secuSearch=(data:any)=>{
+  return this.http.post("http://localhost:8080/searchmodel",data)
+}
+secuEdit=(data:any)=>{
+  return this.http.post("http://localhost:8080/editsecurity",data)
+}
+
+secuView=()=>{
+  return this.http.get("http://localhost:8080/viewsecurity")
+}
+secuDelete=(data:any)=>{
+  return this.http.post("http://localhost:8080/deletesecurity",data)
+}
+
 }
