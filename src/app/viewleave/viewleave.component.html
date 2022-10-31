@@ -1,4 +1,4 @@
-<!-- <app-navbar></app-navbar>
+<app-navbar></app-navbar>
 
 <div class="container">
     <div class="row">
@@ -30,17 +30,31 @@
         <td>{{i.date}}</td>
         <td>{{i.appdate}}</td>
         <td>{{i.type}}</td>
-        <td>
-        <td *ngIf="i.status==0">
+         <td>
+            <div *ngIf="i.status==0">
+                <label for="" class="form-label">Set Status</label>
+        <select name="setStatus" [(ngModel)]="setStatus" id="" class="form-control">
             <a (click)="updateStatus(i.id)">
 
-
+            <option value="1">Approve</option>
+            <option value="-1">Deny</option>
             </a>
-        </td>
-          <td *ngIf="! i.status==0"><div class="alert alert-danger" role="alert">
-           Not Available
-          </div></td>       
-</td>
+        </select>
+    </div>  
+    
+    
+                <td *ngIf="i.status !=0">
+                  <td *ngIf="i.status==1">
+                   Approved
+                  </td>
+                  <td *ngIf="i.status== -1">
+                    Denied
+                  </td>
+
+        
+
+        
+ 
       </tr>
      
     </tbody>
@@ -51,4 +65,4 @@
 </div>
 
 
- -->
+

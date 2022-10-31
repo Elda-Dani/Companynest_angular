@@ -72,5 +72,19 @@ viewCheckIn=()=>{
 viewLog=()=>{
 return this.http.get("http://localhost:8080/viewAllLog")
 }
+vieLogById=(data:any)=>{
+  return this.http.post("http://localhost:8080/viewlog",data)
+}
+
+viewLeaveById=(data:any)=>{
+  return this.http.post("http://localhost:8080/leaveappli",data)
+}
+
+viewLeaves=()=>{
+return this.http.get("http://localhost:8080/viewallleaves")
+}
+updateStatus=(data:any)=>{
+  return this.http.post("http://localhost:8080/leaveStatus",data)
+}
 
 }

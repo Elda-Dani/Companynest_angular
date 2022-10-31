@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-viewlog-byid',
@@ -7,8 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewlogByidComponent implements OnInit {
 
-  constructor() { }
+  constructor(private myapi:ApiService) {
+    this.getLogData()
+   }
 
+
+  getLogData=()=>{
+   let data={
+    "empid":localStorage.getItem("empid")
+   }
+   this.myapi.vieLogById(data).subscribe(
+    (res)=>{
+      console.log("Entered")
+      this.logData=res;
+      console.log(res)
+    }
+   )
+  }
+
+ 
+    
+    displayedColumns: string[] = ['name', 'logintime', 'loginsec_name', 'logouttime','logoutsec_name'];
+    logData :any =[]
   ngOnInit(): void {
   }
 

@@ -26,6 +26,7 @@ import { CheckinComponent } from './checkin/checkin.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ViewlogsComponent } from './viewlogs/viewlogs.component';
 import { ViewlogByidComponent } from './viewlog-byid/viewlog-byid.component';
+import { ViewleavebyidComponent } from './viewleavebyid/viewleavebyid.component';
 
 const appRoutes:Routes=[
   {
@@ -75,7 +76,15 @@ path:"checkout",component:CheckoutComponent
 },
 {
 path:"viewlogbyid",component:ViewlogByidComponent
+},
+{
+  path:"viewleavebyid",component:ViewleavebyidComponent
 }
+
+
+
+
+
 ]
 
 @NgModule({
@@ -100,7 +109,8 @@ path:"viewlogbyid",component:ViewlogByidComponent
     CheckinComponent,
     CheckoutComponent,
     ViewlogsComponent,
-    ViewlogByidComponent
+    ViewlogByidComponent,
+    ViewleavebyidComponent
   ],
   imports: [
     BrowserModule,
