@@ -24,9 +24,9 @@ readValues=()=>{
   this.myapi.secuLogin(data).subscribe(
     (resp:any)=>{
       if (resp.length>0) {
-    
-        localStorage.setItem("stored_name",resp[0].name)
-        localStorage.setItem("stored_id",resp[0].id)
+        localStorage.setItem("sec_id",resp[0].id)
+        localStorage.setItem("sec_name",resp[0].name)
+        console.log(localStorage.getItem("sec_id"));
 this.myRouter.navigate(["/checkin"])
         
       } else {

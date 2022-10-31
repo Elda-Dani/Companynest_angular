@@ -20,6 +20,13 @@ import { EmployeeloginComponent } from './employeelogin/employeelogin.component'
 import { SecurityloginComponent } from './securitylogin/securitylogin.component';
 import { EmployeenavComponent } from './employeenav/employeenav.component';
 import { SecuritynavComponent } from './securitynav/securitynav.component';
+import { AddleaveComponent } from './addleave/addleave.component';
+import { ViewleaveComponent } from './viewleave/viewleave.component';
+import { CheckinComponent } from './checkin/checkin.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { ViewlogsComponent } from './viewlogs/viewlogs.component';
+import { ViewlogByidComponent } from './viewlog-byid/viewlog-byid.component';
+import { ViewleavebyidComponent } from './viewleavebyid/viewleavebyid.component';
 
 const appRoutes:Routes=[
   {
@@ -51,7 +58,33 @@ path:"securityview",component:ViewsecurityComponent
 },
 {
 path:"securitylogin",component:SecurityloginComponent
+},
+{
+  path:"applyleave",component:AddleaveComponent
+},
+{
+  path:"viewleave",component:ViewleaveComponent
+},
+{
+path:"checkin",component:CheckinComponent
+},
+{
+path:"checkout",component:CheckoutComponent
+},
+{
+  path:"viewlog",component:ViewlogsComponent
+},
+{
+path:"viewlogbyid",component:ViewlogByidComponent
+},
+{
+  path:"viewleavebyid",component:ViewleavebyidComponent
 }
+
+
+
+
+
 ]
 
 @NgModule({
@@ -70,7 +103,14 @@ path:"securitylogin",component:SecurityloginComponent
     EmployeeloginComponent,
     SecurityloginComponent,
     EmployeenavComponent,
-    SecuritynavComponent
+    SecuritynavComponent,
+    AddleaveComponent,
+    ViewleaveComponent,
+    CheckinComponent,
+    CheckoutComponent,
+    ViewlogsComponent,
+    ViewlogByidComponent,
+    ViewleavebyidComponent
   ],
   imports: [
     BrowserModule,

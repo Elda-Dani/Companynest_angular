@@ -25,10 +25,10 @@ readValues=()=>{
   this.myapi.empLogin(data).subscribe(
     (resp:any)=>{
       if (resp.length>0) {
-    
-        localStorage.setItem("stored_name",resp[0].name)
-        localStorage.setItem("stored_id",resp[0].id)
-this.myRouter.navigate(["/addleave"])
+        localStorage.setItem("empid",resp[0].id)
+        console.log(localStorage.getItem("empid"));
+        localStorage.setItem('empname',resp[0].name)
+this.myRouter.navigate(["/applyleave"])
         
       } else {
 

@@ -1,0 +1,68 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+          
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Reason</th>
+        <th scope="col">Duration</th>
+        <th scope="col">Leave Date</th>
+        <th scope="col">Apply Date</th>
+        <th scope="col">Type</th>
+        <th scope="col">Status</th>
+
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of leaveData">
+        
+
+        <td>{{i.name}}</td>
+        <td>{{i.reason}}</td>
+        <td>{{i.duration}}</td>
+        <td>{{i.date}}</td>
+        <td>{{i.appdate}}</td>
+        <td>{{i.type}}</td>
+         <td>
+            <div *ngIf="i.status==0">
+                <label for="" class="form-label">Set Status</label>
+        <select name="setStatus" [(ngModel)]="setStatus" id="" class="form-control">
+            <a (click)="updateStatus(i.id)">
+
+            <option value="1">Approve</option>
+            <option value="-1">Deny</option>
+            </a>
+        </select>
+    </div>  
+    
+    
+                <td *ngIf="i.status !=0">
+                  <td *ngIf="i.status==1">
+                   Approved
+                  </td>
+                  <td *ngIf="i.status== -1">
+                    Denied
+                  </td>
+
+        
+
+        
+ 
+      </tr>
+     
+    </tbody>
+  </table>
+
+        </div>
+    </div>
+</div>
+
+
+
